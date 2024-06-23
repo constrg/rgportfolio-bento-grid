@@ -1,0 +1,453 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "sneakers";
+  src: url("../assets/fonts/Sneakers.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "poppins";
+  src: url("../assets/fonts/Poppins_Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 20px;
+  background-color: #070707;
+  font-family: "poppins", sans-serif;
+  font-size: 0.875rem;
+}
+body.body_overflow_hidden_active {
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding: 20px;
+}
+
+.b-radius {
+  border-radius: 5px;
+}
+
+.bento_grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+}
+.bento_grid .nav {
+  grid-column: 1/13;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  height: 100%;
+}
+.bento_grid .nav .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  height: 60px;
+  border-radius: 10px;
+}
+.bento_grid .nav .logo .rg_logo {
+  width: 40px;
+}
+.bento_grid .nav .email_me_link {
+  background-color: #ffffff;
+  width: 100%;
+  height: 60px;
+  font-family: "sneakers", sans-serif;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #070707;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.bento_grid .nav .email_me_link:focus {
+  outline: none;
+}
+.bento_grid .nav .hamburger_menu_btn {
+  display: none;
+}
+.bento_grid .nav .nav_list {
+  display: none;
+}
+.bento_grid .intro {
+  grid-column: 1/5;
+  background-image: url("../assets/images/rg_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+.bento_grid .intro .intro_title {
+  font-family: "sneakers", sans-serif;
+  color: #ffffff;
+  font-size: 2.188rem;
+}
+.bento_grid .intro .intro_p {
+  color: #ffffff;
+  margin-top: 20px;
+}
+.bento_grid .intro .dl_resume_link {
+  background-color: #a0ec00;
+  color: #070707;
+  font-family: "sneakers", sans-serif;
+  font-size: 1.125rem;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bento_grid .intro .dl_resume_link .dl_icon {
+  width: 16px;
+  transition-duration: 0.3s;
+}
+.bento_grid .intro .dl_resume_link:hover .dl_icon {
+  transform: translateY(2px);
+}
+.bento_grid .rg_img {
+  grid-column: 5/7;
+  background-color: #ffffff;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.bento_grid .about_me {
+  grid-column: 7/13;
+  background-color: #a0ec00;
+  border-radius: 10px;
+  color: #070707;
+}
+.bento_grid .about_me .about_me_title {
+  font-family: "sneakers", sans-serif;
+  font-size: 2.188rem;
+}
+.bento_grid .about_me .about_me_p {
+  margin-top: 10px;
+}
+.bento_grid .get_in_touch {
+  grid-column: 1/4;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/keyboard_typing.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  border-radius: 10px;
+}
+.bento_grid .get_in_touch .get_in_touch_title {
+  font-family: "sneakers", sans-serif;
+  color: #ffffff;
+  font-size: 2.188rem;
+}
+.bento_grid .get_in_touch .get_in_touch_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-top: 20px;
+}
+.bento_grid .get_in_touch .get_in_touch_list .get_in_touch_item {
+  font-size: 1.125rem;
+}
+.bento_grid .get_in_touch .get_in_touch_list .get_in_touch_item .get_in_touch_link {
+  color: #ffffff;
+  text-decoration: underline;
+}
+.bento_grid .skills {
+  grid-column: 4/6;
+  background-color: #ffffff;
+  color: #070707;
+  text-align: center;
+  border-radius: 10px;
+}
+.bento_grid .skills .skills_title {
+  font-family: "sneakers", sans-serif;
+  font-size: 2.188rem;
+}
+.bento_grid .skills .skills_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px 10px;
+  margin-top: 20px;
+}
+.bento_grid .skills .skills_list .skills_item .skills_icon {
+  width: 35px;
+  animation: animate_icon 1s ease-in-out infinite;
+}
+.bento_grid .works {
+  grid-column: 6/13;
+  background: linear-gradient(to right, #252525, #202020, #202020);
+  border-radius: 10px;
+}
+.bento_grid .works .works_title {
+  font-family: "sneakers", sans-serif;
+  font-size: 2.188rem;
+  color: #ffffff;
+}
+.bento_grid .works .works_category_list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-top: 20px;
+}
+.bento_grid .works .works_category_list .works_category_item {
+  border: 2px solid #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+}
+.bento_grid .works .works_category_list .works_category_item .works_category_link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1.125rem;
+}
+.bento_grid .works .works_category_list .works_category_item .works_category_link .arrow_up_right_icon {
+  width: 16px;
+  transition-duration: 0.3s;
+}
+.bento_grid .works .works_category_list .works_category_item:hover .arrow_up_right_icon {
+  transform: translate(2px, -2px);
+}
+.bento_grid .work {
+  grid-column: 1/13;
+  background-color: #a0ec00;
+  border-radius: 10px;
+}
+.bento_grid .work .work_title {
+  font-family: "sneakers", sans-serif;
+  color: #070707;
+}
+.bento_grid .work .work_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.bento_grid .work .work_list .work_item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.bento_grid .work .work_list .work_item .work_img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+.bento_grid .work .work_list .work_item .work_item_overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.bento_grid .work .work_list .work_item .work_item_overlay .view_work_link {
+  font-size: 1.125rem;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+}
+.bento_grid .work .work_list .work_item:hover .work_item_overlay {
+  display: flex;
+}
+.bento_grid .work .see_more_link_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.bento_grid .work .see_more_link_wrapper .see_more_link {
+  font-size: 1.125rem;
+  color: #070707;
+  border: 2px solid #070707;
+  padding: 10px;
+  border-radius: 10px;
+}
+.bento_grid .footer {
+  grid-column: 1/13;
+  background-color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+}
+.bento_grid .footer .get_in_touch_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.bento_grid .footer .cp_number {
+  font-weight: 700;
+}
+.bento_grid .footer .copy {
+  font-family: "sneakers", sans-serif;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.scroll_up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.scroll_up .arrow_up_icon {
+  background-color: #ffffff;
+  padding: 10px;
+  position: fixed;
+  width: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  right: 20px;
+  bottom: 0;
+  transform: translateY(100%);
+}
+.scroll_up.scroll_up_active .arrow_up_icon {
+  transform: translateY(0);
+  bottom: 20px;
+}
+
+@media screen and (max-width: 834px) {
+  .bento_grid .intro {
+    grid-column: 1/8;
+  }
+  .bento_grid .rg_img {
+    grid-column: 8/13;
+  }
+  .bento_grid .about_me {
+    grid-column: 1/13;
+  }
+  .bento_grid .get_in_touch {
+    grid-column: 1/6;
+  }
+  .bento_grid .skills {
+    grid-column: 6/13;
+  }
+  .bento_grid .works {
+    grid-column: 1/13;
+  }
+  .bento_grid .work .work_list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 480px) {
+  .bento_grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .bento_grid .nav .hamburger_menu_btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+    height: 60px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 999;
+  }
+  .bento_grid .nav .hamburger_menu_btn .hamburger_menu_btn_line {
+    width: 40px;
+    height: 3px;
+    background-color: #070707;
+    border-radius: 10px;
+    position: relative;
+    transition-duration: 0.1s;
+  }
+  .bento_grid .nav .hamburger_menu_btn:focus {
+    outline: none;
+  }
+  .bento_grid .nav .hamburger_menu_btn.hamburger_menu_btn_active .hamburger_menu_btn_line:nth-child(1) {
+    transform: translateY(10px);
+    visibility: hidden;
+  }
+  .bento_grid .nav .hamburger_menu_btn.hamburger_menu_btn_active .hamburger_menu_btn_line:nth-child(3) {
+    transform: translateY(-10px);
+    visibility: hidden;
+  }
+  .bento_grid .nav .nav_list {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 30px;
+    font-family: "sneakers", sans-serif;
+    z-index: 99;
+  }
+  .bento_grid .nav .nav_list .nav_item {
+    font-size: 1.125rem;
+  }
+  .bento_grid .nav .nav_list .nav_item .nav_link {
+    color: #ffffff;
+  }
+  .bento_grid .nav .nav_list .nav_item:hover {
+    text-decoration: line-through;
+    color: #ffffff;
+  }
+  .bento_grid .nav .nav_list.nav_list_active {
+    display: flex;
+  }
+  .bento_grid .work .work_list {
+    display: flex;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */
