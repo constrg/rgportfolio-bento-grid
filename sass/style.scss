@@ -407,10 +407,20 @@ a {
         align-items: center;
         flex-wrap: wrap;
         column-gap: 20px;
+        margin-bottom: 10px;
+        .get_in_touch_item {
+          .get_in_touch_link {
+            .get_in_touch_icon 
+            {
+              width: 100%;
+            }
+          }
+        }
       }
       .cp_number
       {
         font-weight: $fw-bold;
+        font-size: $fs-link
       }
       .copy {
         font-family: $ff-title;

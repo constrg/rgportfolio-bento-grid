@@ -323,9 +323,14 @@ a {
   flex-wrap: wrap;
   -moz-column-gap: 20px;
        column-gap: 20px;
+  margin-bottom: 10px;
+}
+.bento_grid .footer .get_in_touch_list .get_in_touch_item .get_in_touch_link .get_in_touch_icon {
+  width: 100%;
 }
 .bento_grid .footer .cp_number {
   font-weight: 700;
+  font-size: 1.125rem;
 }
 .bento_grid .footer .copy {
   font-family: "sneakers", sans-serif;
