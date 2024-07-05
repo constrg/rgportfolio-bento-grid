@@ -376,7 +376,7 @@ a {
   .bento_grid .get_in_touch {
     grid-column: 1/6;
   }
-  .bento_grid .skills {
+  .bento_grid .skills_and_tools {
     grid-column: 6/13;
   }
   .bento_grid .works {
