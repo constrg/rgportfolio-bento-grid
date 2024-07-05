@@ -212,7 +212,9 @@ a {
 }
 .bento_grid .works {
   grid-column: 6/13;
-  background: linear-gradient(to right, #252525, #202020, #202020);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../assets/images/cube_bg.jpg");
+  background-size: cover;
+  background-position: center;
   border-radius: 10px;
 }
 .bento_grid .works .works_title {
