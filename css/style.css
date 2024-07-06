@@ -112,7 +112,8 @@ a {
 }
 .bento_grid .intro .intro_p {
   color: #ffffff;
-  margin-top: 20px;
+  margin-top: 10px;
+  text-align: justify;
 }
 .bento_grid .intro .dl_resume_link {
   background-color: #a0ec00;
@@ -157,6 +158,7 @@ a {
 }
 .bento_grid .about_me .about_me_p {
   margin-top: 10px;
+  text-align: justify;
 }
 .bento_grid .get_in_touch {
   grid-column: 1/4;
